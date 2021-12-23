@@ -1,0 +1,11 @@
+start-A
+start-b
+A-c
+A-b
+b-d
+A-end
+b-end
+
+
+start - A b
+A - start - b 
