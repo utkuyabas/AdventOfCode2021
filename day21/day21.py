@@ -2,7 +2,7 @@ import sys
 
 MAX_DICE = 100
 MAX_SCORE = 1000
-TARGET = 21
+TARGET = 5
 
 def solve_2(all_lines):
     x_start, y_start = parse_file(all_lines)
@@ -38,8 +38,8 @@ def solve_2(all_lines):
                 new_y= normalize_pos(y + pos)
                 y_score_t = new_y
             x_temp, y_temp = solve_inner(new_x, new_y, not is_x, x_score + x_score_t, y_score + y_score_t)
-            x_total_win += num * x_temp
-            y_total_win += num * y_temp
+            x_total_win += (num * x_temp)
+            y_total_win += (num * y_temp)
         print("Back in ","solve_inner(",x,",",y,",",is_x,",",x_score, ",",y_score,")")
         print("Totals: ", x_total_win,", ",y_total_win)
 
